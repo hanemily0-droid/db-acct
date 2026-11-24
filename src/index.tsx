@@ -1,12 +1,11 @@
 import { Hono } from 'hono'
-import  About  from '../About'
+import About from '../About'
 
 const app = new Hono()
 
 //app.get('/', (c) => {
 //  return c.text('Hello 343')
 //})
-
 
 const View = () => {
   return (
@@ -18,7 +17,7 @@ const View = () => {
   )
 }
 
-app.get('/page', (c) => {
+app.get('/', (c) => {
   return c.html(<View />)
 })
 
